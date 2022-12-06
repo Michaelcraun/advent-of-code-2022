@@ -110,7 +110,6 @@ extension RockPaperScissors {
         }
         
         func pointValueAgainst(opponent selection: OpponentSelection) -> Int {
-            let status = statusAgainst(opponent: selection)
             return self.pointValue + statusAgainst(opponent: selection).pointValue
         }
     }

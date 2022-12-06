@@ -61,25 +61,14 @@ final class advent_of_code_2022Tests: XCTestCase {
         print(totalScore)
     }
     
-    func findDuplicateItems() -> [String] {
+    func testFindTotalPriority() {
         let lines = Files.shared.linesFrom(file: "rucksacks", ext: "txt")
-        print(lines)
-        
-        var rucksacks: [Rucksack] = []
+        var totalPriority = 0
         for line in lines where line != "" {
-            if let rucksack = Rucksack(items: line) {
-                rucksacks.append(rucksack)
-            }
+            guard let rucksack = Rucksack(items: line) else { return XCTFail() }
+            totalPriority += rucksack.priorityValueOfOverlappingItem
         }
         
-        if lines.count != rucksacks.count { XCTFail() }
-        
-        print(rucksacks.count)
-        
-        return []
-    }
-    
-    func testFindTotalPriority() {
-        let _ = findDuplicateItems()
+        print(totalPriority)
     }
 }
