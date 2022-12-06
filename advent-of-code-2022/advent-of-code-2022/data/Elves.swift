@@ -6,3 +6,14 @@
 //
 
 import Foundation
+
+
+struct Elf {
+    var totalCaloires: Int {
+        var total = 0
+        items.forEach({ total += $0 })
+        return total
+    }
+    
+    var items: [Int]
+}

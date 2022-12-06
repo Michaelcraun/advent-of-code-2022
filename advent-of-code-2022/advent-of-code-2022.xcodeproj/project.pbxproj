@@ -14,6 +14,13 @@
 		9B7A5A58293EB1D60081334A /* advent_of_code_2022Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B7A5A57293EB1D60081334A /* advent_of_code_2022Tests.swift */; };
 		9B7A5A62293EB1D60081334A /* advent_of_code_2022UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B7A5A61293EB1D60081334A /* advent_of_code_2022UITests.swift */; };
 		9B7A5A64293EB1D60081334A /* advent_of_code_2022UITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B7A5A63293EB1D60081334A /* advent_of_code_2022UITestsLaunchTests.swift */; };
+		9B7A5A72293EB2110081334A /* calorie-counting.txt in Resources */ = {isa = PBXBuildFile; fileRef = 9B7A5A71293EB2110081334A /* calorie-counting.txt */; };
+		9B7A5A75293EB2350081334A /* Files.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B7A5A74293EB2350081334A /* Files.swift */; };
+		9B7A5A78293EB44F0081334A /* Elves.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B7A5A77293EB44F0081334A /* Elves.swift */; };
+		9B7A5A7A293EB94B0081334A /* rock-paper-scissors.txt in Resources */ = {isa = PBXBuildFile; fileRef = 9B7A5A79293EB94B0081334A /* rock-paper-scissors.txt */; };
+		9B7A5A7C293EB9A40081334A /* RPS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B7A5A7B293EB9A40081334A /* RPS.swift */; };
+		9B7A5A7E293EBFC40081334A /* Rucksack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B7A5A7D293EBFC40081334A /* Rucksack.swift */; };
+		9B7A5A80293EC0EA0081334A /* rucksacks.txt in Resources */ = {isa = PBXBuildFile; fileRef = 9B7A5A7F293EC0EA0081334A /* rucksacks.txt */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,6 +52,13 @@
 		9B7A5A5D293EB1D60081334A /* advent-of-code-2022UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "advent-of-code-2022UITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9B7A5A61293EB1D60081334A /* advent_of_code_2022UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = advent_of_code_2022UITests.swift; sourceTree = "<group>"; };
 		9B7A5A63293EB1D60081334A /* advent_of_code_2022UITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = advent_of_code_2022UITestsLaunchTests.swift; sourceTree = "<group>"; };
+		9B7A5A71293EB2110081334A /* calorie-counting.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = "calorie-counting.txt"; sourceTree = "<group>"; };
+		9B7A5A74293EB2350081334A /* Files.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Files.swift; sourceTree = "<group>"; };
+		9B7A5A77293EB44F0081334A /* Elves.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Elves.swift; sourceTree = "<group>"; };
+		9B7A5A79293EB94B0081334A /* rock-paper-scissors.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = "rock-paper-scissors.txt"; sourceTree = "<group>"; };
+		9B7A5A7B293EB9A40081334A /* RPS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RPS.swift; sourceTree = "<group>"; };
+		9B7A5A7D293EBFC40081334A /* Rucksack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rucksack.swift; sourceTree = "<group>"; };
+		9B7A5A7F293EC0EA0081334A /* rucksacks.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = rucksacks.txt; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,6 +109,9 @@
 		9B7A5A44293EB1D40081334A /* advent-of-code-2022 */ = {
 			isa = PBXGroup;
 			children = (
+				9B7A5A76293EB43F0081334A /* data */,
+				9B7A5A73293EB2230081334A /* helpers */,
+				9B7A5A70293EB1F80081334A /* puzzle_input */,
 				9B7A5A45293EB1D40081334A /* advent_of_code_2022App.swift */,
 				9B7A5A47293EB1D40081334A /* ContentView.swift */,
 				9B7A5A49293EB1D50081334A /* Assets.xcassets */,
@@ -127,6 +144,34 @@
 				9B7A5A63293EB1D60081334A /* advent_of_code_2022UITestsLaunchTests.swift */,
 			);
 			path = "advent-of-code-2022UITests";
+			sourceTree = "<group>";
+		};
+		9B7A5A70293EB1F80081334A /* puzzle_input */ = {
+			isa = PBXGroup;
+			children = (
+				9B7A5A71293EB2110081334A /* calorie-counting.txt */,
+				9B7A5A79293EB94B0081334A /* rock-paper-scissors.txt */,
+				9B7A5A7F293EC0EA0081334A /* rucksacks.txt */,
+			);
+			path = puzzle_input;
+			sourceTree = "<group>";
+		};
+		9B7A5A73293EB2230081334A /* helpers */ = {
+			isa = PBXGroup;
+			children = (
+				9B7A5A74293EB2350081334A /* Files.swift */,
+			);
+			path = helpers;
+			sourceTree = "<group>";
+		};
+		9B7A5A76293EB43F0081334A /* data */ = {
+			isa = PBXGroup;
+			children = (
+				9B7A5A77293EB44F0081334A /* Elves.swift */,
+				9B7A5A7B293EB9A40081334A /* RPS.swift */,
+				9B7A5A7D293EBFC40081334A /* Rucksack.swift */,
+			);
+			path = data;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -235,6 +280,9 @@
 			files = (
 				9B7A5A4E293EB1D50081334A /* Preview Assets.xcassets in Resources */,
 				9B7A5A4A293EB1D50081334A /* Assets.xcassets in Resources */,
+				9B7A5A72293EB2110081334A /* calorie-counting.txt in Resources */,
+				9B7A5A80293EC0EA0081334A /* rucksacks.txt in Resources */,
+				9B7A5A7A293EB94B0081334A /* rock-paper-scissors.txt in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -260,7 +308,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				9B7A5A48293EB1D40081334A /* ContentView.swift in Sources */,
+				9B7A5A78293EB44F0081334A /* Elves.swift in Sources */,
+				9B7A5A7E293EBFC40081334A /* Rucksack.swift in Sources */,
 				9B7A5A46293EB1D40081334A /* advent_of_code_2022App.swift in Sources */,
+				9B7A5A75293EB2350081334A /* Files.swift in Sources */,
+				9B7A5A7C293EB9A40081334A /* RPS.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -6,30 +6,80 @@
 //
 
 import XCTest
+@testable import advent_of_code_2022
 
 final class advent_of_code_2022Tests: XCTestCase {
-
-    override func setUpWithError() throws {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
-    }
-
-    override func tearDownWithError() throws {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
-    }
-
-    func testExample() throws {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
-        // Any test you write for XCTest can be annotated as throws and async.
-        // Mark your test throws to produce an unexpected failure when your test encounters an uncaught error.
-        // Mark your test async to allow awaiting for asynchronous code to complete. Check the results with assertions afterwards.
-    }
-
-    func testPerformanceExample() throws {
-        // This is an example of a performance test case.
-        measure {
-            // Put the code you want to measure the time of here.
+    func sortElvesByFattest() -> [Elf] {
+        let lines = Files.shared.linesFrom(file: "calorie-counting", ext: "txt")
+        var elves: [Elf] = []
+        
+        var currentElfCalories: [Int] = []
+        for line in lines {
+            if line == "" {
+                let elf = Elf(items: currentElfCalories)
+                elves.append(elf)
+                currentElfCalories.removeAll()
+                continue
+            }
+            
+            if let calories = Int(line) {
+                currentElfCalories.append(calories)
+            }
         }
+        
+        let sortedByFatness = elves.sorted(by: { $0.totalCaloires > $1.totalCaloires })
+        return sortedByFatness
     }
-
+    
+    func testFindElfWIthMostCalories() {
+        let elves = sortElvesByFattest()
+        guard let fattest = elves.first else { return XCTFail() }
+        print(fattest.totalCaloires)
+    }
+    
+    func testFindElvesWithMostCalories() {
+        var elves = sortElvesByFattest()
+        var totalCalories = 0
+        
+        for _ in 0...2 {
+            let fattest = elves.removeFirst()
+            totalCalories += fattest.totalCaloires
+        }
+        
+        print(totalCalories)
+    }
+    
+    func testCalculateRpsScore() {
+        let lines = Files.shared.linesFrom(file: "rock-paper-scissors", ext: "txt")
+        var totalScore = 0
+        
+        for line in lines where line != "" {
+            guard let match = RockPaperScissors(line: line) else { return XCTFail() }
+            totalScore += match.pointValue
+        }
+        
+        print(totalScore)
+    }
+    
+    func findDuplicateItems() -> [String] {
+        let lines = Files.shared.linesFrom(file: "rucksacks", ext: "txt")
+        print(lines)
+        
+        var rucksacks: [Rucksack] = []
+        for line in lines where line != "" {
+            if let rucksack = Rucksack(items: line) {
+                rucksacks.append(rucksack)
+            }
+        }
+        
+        if lines.count != rucksacks.count { XCTFail() }
+        
+        print(rucksacks.count)
+        
+        return []
+    }
+    
+    func testFindTotalPriority() {
+        let _ = findDuplicateItems()
+    }
 }
